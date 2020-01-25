@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.house, #root {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px 50px 0;
+}
+h1 {
+  font-size: 32px;
+  color: #910;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.add-style {
+  padding: 15px;
+  background-color: #202;
+  color: white;
+}
+.add-style:hover {
+  cursor: pointer;
+  background-color: #606;
+}
+.text {
+  font-size: 22px;
+}
+.state {
+  color: blue;
+}
+#root button {
+  width: 50%;
+  padding: 15px 0;
+  margin-top: 10px;
+  color: white;
+  background-color: #606;
+}
+#root button:nth-child(2n+1) {
+  background-color: #202;
+}
+#root button:hover {
+  background-color: #202;
+  cursor: pointer;
+}
+#root button:hover:nth-child(2n+1) {
+  background-color: #606;
+}

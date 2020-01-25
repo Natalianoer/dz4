@@ -4,7 +4,7 @@
 }
 .house, #root {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 50px 50px 0;

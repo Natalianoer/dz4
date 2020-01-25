@@ -6,11 +6,12 @@ function Camera(state, mode, record, live) {
 }
 
 Camera.prototype.dayMode = function() {
-  this.style.backgrounColor = 'white';
+  document.body.style.backgroundColor = "white";
+
 };
 
 Camera.prototype.nightMode = function() {
-  this.style.backgrounColor = 'black';
+  document.body.style.backgroundColor = "#333";
 };
 
 Camera.prototype.getMode = function () {
@@ -18,15 +19,16 @@ Camera.prototype.getMode = function () {
 };
 
 Camera.prototype.getTypeRecord = function () {
-  // if (this._record == true) {
-  //     return this._state;
-  // }
-  // if (this._live == true) {
-  //     return this._state;
-  // }
   return this._record;
 };
 
 Camera.prototype.getTypeLive = function () {
   return this._live;
 }
+
+// Camera.prototype.on = function() {
+//     this._state = true;
+// };
+// Camera.prototype.off = function() {
+//     this._state = false;
+// };

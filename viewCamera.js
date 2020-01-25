@@ -27,12 +27,6 @@ ViewCamera.prototype.render = function() {//для отображения эле
     var recordType = document.createElement("div");
     recordType.className = "text";
 
-    // var modeDay = document.createElement("div");
-    // modeDay.innerHTML = "Дневной режим";
-    //
-    // var modeNight = document.createElement("div");
-    // modeNight.innerHTML = "Ночной режим";
-
     var onBtn = document.createElement("button");
     onBtn.type = "button";
     onBtn.className = "on";

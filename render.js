@@ -14,3 +14,11 @@ addCameraBtn.addEventListener('click', function() {
      var viewCameraModel = new ViewCamera(cameraModel, document.getElementById("root"));
      viewCameraModel.render();
 })
+
+var addSignalingBtn = document.getElementById("add-signaling");
+addSignalingBtn.className = "add-style";
+addSignalingBtn.addEventListener('click', function() {
+     var signalingModel = new Signaling("state", "model", "record", "password");
+     var viewSignalingModel = new ViewSignaling(signalingModel, document.getElementById("root"));
+     viewSignalingModel.render();
+})

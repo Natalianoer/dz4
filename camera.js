@@ -5,6 +5,9 @@ function Camera(state, mode, record, live) {
     this._live = "Live";
 }
 
+Camera.prototype = Object.create(Devices.prototype);
+Camera.prototype.constructor = Camera;//добавляем всё из Devices
+
 Camera.prototype.dayMode = function() {
   document.body.style.backgroundColor = "white";
 
@@ -25,10 +28,3 @@ Camera.prototype.getTypeRecord = function () {
 Camera.prototype.getTypeLive = function () {
   return this._live;
 }
-
-// Camera.prototype.on = function() {
-//     this._state = true;
-// };
-// Camera.prototype.off = function() {
-//     this._state = false;
-// };

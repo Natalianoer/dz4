@@ -1,23 +1,32 @@
 function Signaling(state, model, password) {
   Devices.call(this, state, model);
-  this._password = 123;
+  this._password = 12345;
+  this._count = 0;
+  this._stateSignalins = false;
 }
 
-Signaling.prototype.getPassword = function () {
-  // var count = 0;
-  // if (this._passowd == 123) {
-  //   alert('Пароль верный');
-  // }
-  // else {
-  //     count++;
-  //     alert('Неправильный пароль');
-  //   }
-  // if (count === 3) {
-  //   return "this.on";
-  // }
-  // else {
-  //   return "this.off";
-  // }
+Signaling.prototype = Object.create(Devices.prototype);
+Signaling.prototype.constructor = Signaling;//добавляем всё из кодиционера
 
-  return this._password;
+Signaling.prototype.onSignaling = function () {
+  this._stateSignalins = true;
+  return this._stateSignalins;
+}
+
+Signaling.prototype.offSignaling = function(getPassword) {
+  this._stateSignalins = false;
+  return this._stateSignalins;
+}
+
+Signaling.prototype.getPassword = function(inputPassword) {
+  if (inputPassword == this._password) {
+    this._count = 0;
+    return;
+  }
+  else {
+    this._count++;
+    if (this._count == 3) {
+      this.onSignaling();
+    }
+  }
 };
